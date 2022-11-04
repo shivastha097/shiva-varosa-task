@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import { dbConnect } from "./utils/db";
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -11,6 +12,9 @@ const bootstrap = async () => {
     app.get("/status", (req, res) => {
         return res.json({ status: "OK" });
     });
+
+    // Establish database connection
+    await dbConnect();
 
     app.listen(PORT, () => {
         console.log(`Server running on ${BASE_URL}:${PORT}`);
