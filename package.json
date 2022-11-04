@@ -19,8 +19,14 @@
   "author": "Shiva Shrestha",
   "license": "ISC",
   "dependencies": {
+    "@typegoose/typegoose": "github:typegoose/typegoose",
+    "apollo-server-express": "^3.11.1",
+    "class-validator": "^0.13.2",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "graphql": "^15.8.0",
+    "mongoose": "^6.7.1",
+    "type-graphql": "^1.1.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.42.0",
