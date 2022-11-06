@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { dbConnect } from "./utils/db";
 import { buildSchema } from "type-graphql";
 import { resolvers } from "./resolvers";
+import errorHandler from "./utils/error";
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -17,7 +18,10 @@ const bootstrap = async () => {
         resolvers,
     });
 
-    const apolloServer = new ApolloServer({ schema });
+    const apolloServer = new ApolloServer({
+        schema,
+        formatError: errorHandler,
+    });
     await apolloServer.start();
     apolloServer.applyMiddleware({ app });
 
