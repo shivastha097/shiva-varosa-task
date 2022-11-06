@@ -21,7 +21,11 @@ const errorHandler = (err: GraphQLError | any) => {
             data: err.message.split(";"),
         };
     }
-    if (err.extensions.code === "INTERNAL_SERVER_ERROR") {
+    if (
+        err.extensions.code === "INTERNAL_SERVER_ERROR" ||
+        err.extensions.code === "ENTITY_NOT_FOUND" ||
+        err.extensions.code === "DUPLICATE_EMAIL_ERROR"
+    ) {
         return {
             message: "Something went wrong",
             code: err.extensions.code,
