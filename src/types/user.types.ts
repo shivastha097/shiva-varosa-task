@@ -1,16 +1,6 @@
-import {
-    IsDate,
-    IsEmail,
-    IsEnum,
-    IsNotEmpty,
-    IsOptional,
-    IsString,
-    MaxLength,
-    MinLength,
-    NotEquals,
-} from "class-validator";
+import { IsDate, IsEmail, IsEnum, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
 import { ArgsType, Field, InputType, ObjectType } from "type-graphql";
-import { ContactMode, User } from "../user.schema";
+import { ContactMode, User } from "../schema/user.schema";
 
 /**
  * type UserPaginateResponseObject

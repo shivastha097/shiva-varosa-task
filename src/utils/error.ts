@@ -1,6 +1,10 @@
-import { ApolloError } from "apollo-server-express";
 import { GraphQLError } from "graphql";
 
+/**
+ *
+ * @param err
+ * @returns formattedErrors
+ */
 const errorHandler = (err: GraphQLError | any) => {
     if (err.message && err.message.startsWith("Argument Validation Error")) {
         return {

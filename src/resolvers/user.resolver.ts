@@ -1,5 +1,5 @@
 import { Resolver, Query, Arg, Args, Mutation } from "type-graphql";
-import { CreateUserInput, UpdateUserInput, UserFilter, UserListResponse } from "../schema/types/user.types";
+import { CreateUserInput, UpdateUserInput, UserFilter, UserListResponse } from "../types/user.types";
 import { User } from "../schema/user.schema";
 import UserService from "../service/user.service";
 

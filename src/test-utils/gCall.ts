@@ -9,6 +9,11 @@ interface Options {
 
 let schema: GraphQLSchema;
 
+/**
+ *
+ * @param param0
+ * @returns graphql query result
+ */
 export const gCall = async ({ source, variableValues }: Options) => {
     if (!schema) {
         schema = await buildSchema({ resolvers });
