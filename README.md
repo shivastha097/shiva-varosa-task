@@ -4,8 +4,6 @@ This is a simple CRUD task developed with typescript, nodejs, mongodb and graphq
 
 ## Installation
 
----
-
 1. Clone the project
 2. Create mongodb database
 3. npm install
@@ -14,15 +12,11 @@ This is a simple CRUD task developed with typescript, nodejs, mongodb and graphq
 
 ## Testing
 
----
-
 1. Create mongodb database for testing
 2. Configure database uri in .env MONGO_TEST_URI, if it doesn't work, then configure in /src/test-utils/testDb.ts
 3. npm run test
 
 ## Description
-
----
 
 This task consists of user CRUD operation. It is developed in typescript using Node.js, MongoDB and GraphQL.
 
@@ -44,13 +38,11 @@ This task consists of user CRUD operation. It is developed in typescript using N
 
 ## Endpoint testing
 
----
-
 The endpoints can be tested in browser or postman through the graphql endpoint. The default url is "http://localhost:5000/graphql".
 
 1.  List users: query
 
-    ```json
+    ```js
     query Data($page: Float, $limit: Float) {
         users(page: $page, limit: $limit) {
             data {
@@ -101,7 +93,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
 2.  Create User: mutation
 
-    ```json
+    ```js
         mutation CreateUser($input: CreateUserInput!) {
             createUser(input: $input) {
                 _id
@@ -156,7 +148,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
 3.  Get single user: query
 
-    ```json
+    ```js
     query User($userId: String!) {
         user(userId: $userId) {
             _id
@@ -174,7 +166,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
     -   Input variables
 
-    ```json
+    ```js
     {
         "userId": ObjectId
     }
@@ -202,7 +194,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
 4.  Update user: mutation
 
-    ```json
+    ```js
     mutation UpdateUser($userId: String!, $update: UpdateUserInput!) {
         updateUser(userId: $userId, update: $update) {
             name
@@ -256,7 +248,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
 5.  Delete User: mutation
 
-    ```json
+    ```js
     mutation DeleteUser($userId: String!) {
         deleteUser(userId: $userId)
     }
@@ -264,7 +256,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
     -   Input variables
 
-    ```json
+    ```js
     {
         "userId": ObjectId
     }
@@ -272,7 +264,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
     -   Returns
 
-    ```json
+    ```js
     {
         "data": {
             "deleteUser": true // return true if success, else returns false
@@ -281,8 +273,6 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
     ```
 
 ## Used Packages
-
----
 
 1.  Dependencies
     Since I have used typescript in this project, so I used typescript version of every dependencies.
@@ -298,7 +288,7 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 
 2.  Dev Dependencies
 
-    - eslint: code pattern checker for JavaScript
-    - prettier: code formatter
-    - jest: delightful testing framework
-    - ts-jest: typescript supported jest
+    -   eslint: code pattern checker for JavaScript
+    -   prettier: code formatter
+    -   jest: delightful testing framework
+    -   ts-jest: typescript supported jest
