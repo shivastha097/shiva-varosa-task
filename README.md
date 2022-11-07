@@ -21,6 +21,7 @@ This is a simple CRUD task developed with typescript, nodejs, mongodb and graphq
 This task consists of user CRUD operation. It is developed in typescript using Node.js, MongoDB and GraphQL.
 
 -   It consists of User schema consisting of following attributes:
+
     -   name: String
     -   phone: String|Min:9|Max:12
     -   email: String|Unique
@@ -29,7 +30,9 @@ This task consists of user CRUD operation. It is developed in typescript using N
     -   dob: Date
     -   education?: String
     -   contact_mode: Enum['phone', 'email', 'none']
+
 -   CRUD endpoints:
+
     -   query users: List users array with pagination details
     -   query user: Get single user
     -   mutation createUser: Create new user
@@ -277,14 +280,14 @@ The endpoints can be tested in browser or postman through the graphql endpoint. 
 1.  Dependencies
     Since I have used typescript in this project, so I used typescript version of every dependencies.
 
-        - express: web framework for Node.js
-        - mongoose: data modeling tool for MongoDB
-        - typegoose: define mongoose models using TypeScript classes
-        - graphql: query language for APIs
-        - type-graphql: create GraphQL schema and resolvers with TypeScript
-        - apollo-server-express: express imtegration of Apollo Server
-        - class-validator: Decorator based data validation
-        - dotenv: store environment variables
+    -   express: web framework for Node.js
+    -   mongoose: data modeling tool for MongoDB
+    -   typegoose: define mongoose models using TypeScript classes
+    -   graphql: query language for APIs
+    -   type-graphql: create GraphQL schema and resolvers with TypeScript
+    -   apollo-server-express: express imtegration of Apollo Server
+    -   class-validator: Decorator based data validation
+    -   dotenv: store environment variables
 
 2.  Dev Dependencies
 
